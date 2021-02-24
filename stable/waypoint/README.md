@@ -104,8 +104,8 @@ service:
 ```
 service:
   type: ClusterIP
-  waypointGrpcPort: 443
-  waypointServerPort: 80
+  waypointGrpcPort: 9701
+  waypointServerPort: 9702
 ```
   - **NodePort** 
 ```
@@ -121,24 +121,15 @@ Important to note that currently Waypoint has a TLS limitation [click here to re
 ### Annotations <br>   
   - **waypointGrpc annotations** <br>
 ```       
-nginx.ingress.kubernetes.io/ssl-passthrough: "true" <br>
-nginx.ingress.kubernetes.io/ssl-redirect: "true"   <br> 
 nginx.ingress.kubernetes.io/backend-protocol: GRPCS <br>
 ```
 
    - **waypointServer annotations** <br>
 ```
  nginx.ingress.kubernetes.io/backend-protocol: HTTPS 
- nginx.ingress.kubernetes.io/proxy-http-version: "1.0"
 ```
-
-- **nginx.ingress.kubernetes.io/ssl-passthrough** instructs the controller to send TLS connections directly to the backend instead of letting NGINX decrypt the communication.
-- **nginx.ingress.kubernetes.io/ssl-redirect** will enforce a redirect to HTTPS even when there is no TLS certificate available.
 - **nginx.ingress.kubernetes.io/backend-protocol** indicates how NGINX should communicate with the backend service. <br>
 _Valid Values: HTTP, HTTPS, GRPC, GRPCS, AJP and FCGI._ <br>
-- **nginx.ingress.kubernetes.io/proxy-http-version** Using this annotation sets the proxy_http_version that the Nginx reverse proxy will use to communicate with the backend. By default this is set to "1.1". <br>
-[Here is a list of all possible nginx ingress-controller annotations.](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/) <br>
-If you are using a cert-manager to complete your TLS requests, please ensure to add that annotation for both ingresses.
 ### Hosts 
   - **waypointGrpc** <br>
 Add your domain name for GRPC to use.  We suggest "waypoint-grpc.cluster.local".  This will help to define the difference between the grpc and https domains.
@@ -157,6 +148,11 @@ We will also specify the server address, the server-tls-skip-verify, and context
 -**server-tls-skip-verify** - If true, will not validate TLS cert presented by the server.
 -**context-create** - Create a CLI context for this bootstrapped server. The context name will be the value of this flag. If this is an empty string, a context will not be created
 Both server-tls and server-tls-skip-verify are important because we are terminating the TLS cert the server generates automatically on start up and are providing our own.
+  - **LoadBalancer** 
+```
+waypoint server bootstrap -server-addr=LoadBalancerIP:9701 -server-tls-skip-verify -context-create="k8s-server"
+```
+  - **ClusterIP** 
 ```
 waypoint server bootstrap -server-addr=waypoint-grpc.yourdomain.com:443 -server-tls-skip-verify -context-create="k8s-server"
 ```
@@ -174,9 +170,19 @@ We also provide a copy of your url address of the Waypoint server. Copy and past
 ```
 echo $WAYPOINT_INIT_TOKEN
 ```
-
+## Waypoint Server Config
+Waypoint Server Config command connects your applications to Hashicorp's URL service. This command will need set before running your applications. There is an example of this command for the LoadBalancer and ClusterIP below, and it follows the same format but you will need to provide your GRPC address and port. It is important to note that you will need to be in the same directory as your "waypoint.hcl" file to set the Server config.  Once set you will not need to run this command again for this context.
+  - **LoadBalancer** 
+```
+waypoint server config-set -advertise-addr=LoadBalancerIP:9701 -advertise-tls-skip-verify
+```
+  - **ClusterIP** 
+```
+waypoint server config-set -advertise-addr=waypoint-grpc.yourdomain.com:443 -advertise-tls-skip-verify
+```
 ## Hello-world App Testing
-Now that you have your waypoint server up and running you can now test this tool with our hello-world application. We have created a simple docker build and kubernetes deployment of the hello world app utilizing the waypoint.hcl file. You can navigate in the Fuchicorp repository to [helm_charts/examples/waypoint/hello-world-demo](https://github.com/fuchicorp/helm_charts/tree/feature/%232/examples/waypoint/hello-world-demo).  We have a README file with detailed instructions on how to deploy along with other great information and resources links about the waypoint.hcl configuration options.
+Now that you have your waypoint server up and running you can now test this tool with our hello-world application. We have created a simple docker build and kubernetes deployment of the hello world app utilizing the waypoint.hcl file. You can navigate in the Fuchicorp repository to [helm_charts/examples/waypoint/hello-world-demo](https://github.com/fuchicorp/helm_charts/tree/feature/%232/examples/waypoint/hello-world-demo).  We have a README file with detailed instructions on how to deploy along with other great information and resources links about the waypoint.hcl configuration options. <br>
+  - **Again please note you will need to set the Waypoint Server Config above to ensure you are connected to Hashicorp's URL service. This also allows you to view logs and view/set hostname**
 
 
 ## Delete the Chart
