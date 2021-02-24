@@ -30,7 +30,7 @@ app "hello-world" {
    release {
       use "kubernetes" {
         namespace = "tools"
-        port = 443
+        port = 80
      }
    }
   

@@ -2,7 +2,10 @@
 1. Please run following commands to access waypoint server:
 {{- range $host := .Values.waypointGrpc.ingress.hosts }}
 
-  ## To get your token run following command
+  ## Check if the pod is ready before running the token command
+  kubectl get pods --namespace {{ .Release.Namespace }} | grep waypoint
+
+  ## Use following up to bootstrap the Waypoint server 
   export WAYPOINT_INIT_TOKEN=$(waypoint server bootstrap -server-addr="{{ $host.host }}:443" -server-tls-skip-verify -context-create=k8s-server)
 
   ## Please verify your context by running command

@@ -25,22 +25,13 @@ spec:
         - -accept-tos
         - -listen-grpc=0.0.0.0:9701
         - -listen-http=0.0.0.0:9702
-{{- if contains "ClusterIP" .Values.service.type }}
-  {{- if .Values.waypointServer.ingress.enabled }}
-    {{- range $host := .Values.waypointGrpc.ingress.hosts }}
-        - -advertise-addr=http{{ if $.Values.waypointServer.ingress.tls }}s{{ end }}://{{ $host.host }}:9702
-        - -advertise-tls=true
-        - -advertise-tls-skip-verify=true
-    {{- end }}
-  {{- end }}
-{{- end }}
         command:
         - waypoint
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}" 
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         env:
         - name: WAYPOINT_SERVER_ADDR
-          value: waypoint.fuchicorp.com
+          value: "{{ .Values.waypointServer.ingress.hosts }}"
           
         livenessProbe:
           httpGet:

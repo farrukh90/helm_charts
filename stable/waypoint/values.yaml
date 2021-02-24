@@ -27,8 +27,6 @@ waypointGrpc:
       # kubernetes.io/ingress.class: nginx
       # cert-manager.io/cluster-issuer: letsencrypt-prod
       # nginx.ingress.kubernetes.io/backend-protocol: GRPCS ## required for waypoint server
-      # nginx.ingress.kubernetes.io/ssl-passthrough: "true" ## required for waypoint server
-      # nginx.ingress.kubernetes.io/ssl-redirect: "true"    ## required for waypoint server
     hosts:
       - host: waypoint-grpc.cluster.local
         paths:
@@ -45,8 +43,6 @@ waypointServer:
       # cert-manager.io/cluster-issuer: letsencrypt-prod
       # kubernetes.io/ingress.class: nginx
       # nginx.ingress.kubernetes.io/backend-protocol: HTTPS ## required for waypoint server
-      # nginx.ingress.kubernetes.io/proxy-http-version: "1.0" ## required for waypoint server
-
     hosts:
       - host: waypoint.cluster.local
         paths:
