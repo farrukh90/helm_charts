@@ -146,13 +146,13 @@ We will need to bootstrap the server to be able to receive the initial token. Th
 We will also specify the server address, the server-tls-skip-verify, and context name within this command. 
 - **server-tls** - If true, will connect to the server over TLS. 
 - **server-tls-skip-verify** - If true, will not validate TLS cert presented by the server.
-- **context-create** - Create a CLI context for this bootstrapped server. The context name will be the value of this flag. If this is an empty string, a context will not be created<br>
-Both server-tls and server-tls-skip-verify are important because we are terminating the TLS cert the server generates automatically on start up and are providing our own.
-  - **LoadBalancer** 
+- **context-create** - Create a CLI context for this bootstrapped server. The context name will be the value of this flag. If this is an empty string, a context will not be created <br>
+Both server-tls and server-tls-skip-verify are important because we are terminating the TLS cert the server generates automatically on start up and are providing our own. <br>
+- **LoadBalancer** 
 ```
 waypoint server bootstrap -server-addr=LoadBalancerIP:9701 -server-tls-skip-verify -context-create="k8s-server"
 ```
-  - **ClusterIP** 
+- **ClusterIP** 
 ```
 waypoint server bootstrap -server-addr=waypoint-grpc.yourdomain.com:443 -server-tls-skip-verify -context-create="k8s-server"
 ```
