@@ -147,7 +147,6 @@ We will also specify the server address, the server-tls-skip-verify, and context
 - **server-tls** - If true, will connect to the server over TLS. 
 - **server-tls-skip-verify** - If true, will not validate TLS cert presented by the server.
 - **context-create** - Create a CLI context for this bootstrapped server. The context name will be the value of this flag. If this is an empty string, a context will not be created <br>
-Both server-tls and server-tls-skip-verify are important because we are terminating the TLS cert the server generates automatically on start up and are providing our own. <br>
 - **LoadBalancer** 
 ```
 waypoint server bootstrap -server-addr=LoadBalancerIP:9701 -server-tls-skip-verify -context-create="k8s-server"
@@ -156,6 +155,8 @@ waypoint server bootstrap -server-addr=LoadBalancerIP:9701 -server-tls-skip-veri
 ```
 waypoint server bootstrap -server-addr=waypoint-grpc.yourdomain.com:443 -server-tls-skip-verify -context-create="k8s-server"
 ```
+Both server-tls and server-tls-skip-verify are important because we are terminating the TLS cert the server generates automatically on start up and are providing our own.
+Providing a name for -context-create during bootstrapping saves all this information to name specified. <br>
 [Click here to see more command options available.](https://www.waypointproject.io/commands/server-run)
 
 [Click here to see more command options available for context.](https://www.waypointproject.io/commands/context-create)
