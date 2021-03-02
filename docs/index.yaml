@@ -1,0 +1,241 @@
+apiVersion: v1
+entries:
+  artemis:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-02-04T15:32:17.419856936Z"
+    description: A Helm chart for Kubernetes
+    digest: 57aaf509ce17e067cb7554ee7910d75a99a357e16a32bf0d778cdc0ed1bdfe85
+    name: artemis
+    urls:
+    - artemis-0.1.0.tgz
+    version: 0.1.0
+  consul:
+  - apiVersion: v1
+    appVersion: 1.5.3
+    created: "2021-02-04T15:32:17.422707522Z"
+    description: Highly available and distributed service discovery and key-value
+      store designed with support for the modern data center to make distributed systems
+      and configuration easy.
+    digest: b94b3a0c464859b1da34a4ba53647e2c098a2cff5c4639192a50f521464492b6
+    home: https://github.com/hashicorp/consul
+    icon: https://raw.githubusercontent.com/hashicorp/consul/bce3809dfca37b883828c3715b84143dd71c0f85/website/source/assets/images/favicons/android-chrome-512x512.png
+    maintainers:
+    - email: lachlan.evenson@microsoft.com
+      name: lachie83
+    name: consul
+    sources:
+    - https://github.com/kelseyhightower/consul-on-kubernetes
+    urls:
+    - consul-3.9.4.tgz
+    version: 3.9.4
+  elasticsearch:
+  - apiVersion: v1
+    appVersion: 7.8.0
+    created: "2021-02-04T15:32:17.427744087Z"
+    description: Official Elastic helm chart for Elasticsearch
+    digest: 51c18ee08d5b0abc890bcbe8e80006a843a3d1bc9ef15ef47e4432fd7274d9e3
+    home: https://github.com/elastic/helm-charts
+    icon: https://helm.elastic.co/icons/elasticsearch.png
+    maintainers:
+    - email: helm-charts@elastic.co
+      name: Elastic
+    name: elasticsearch
+    sources:
+    - https://github.com/elastic/elasticsearch
+    urls:
+    - elasticsearch-7.8.0.tgz
+    version: 7.8.0
+  filebeat:
+  - apiVersion: v1
+    appVersion: 7.8.0
+    created: "2021-02-04T15:32:17.428912417Z"
+    description: Official Elastic helm chart for Filebeat
+    digest: 2a788b24a0abb67cbe058c18b91e3e1ee4e6bc4c3697ec5fb1150d535182b941
+    home: https://github.com/elastic/helm-charts
+    icon: https://helm.elastic.co/icons/beats.png
+    maintainers:
+    - email: helm-charts@elastic.co
+      name: Elastic
+    name: filebeat
+    sources:
+    - https://github.com/elastic/beats
+    urls:
+    - filebeat-7.8.0.tgz
+    version: 7.8.0
+  jenkins:
+  - apiVersion: v1
+    appVersion: lts
+    created: "2021-02-04T15:32:17.432538859Z"
+    description: Open source continuous integration server. It supports multiple SCM
+      tools including CVS, Subversion and Git. It can execute Apache Ant and Apache
+      Maven-based projects as well as arbitrary scripts.
+    digest: 62aea3455e34dabc1e5a5524eee15e21b2b71b9cc40dbdfa3481656205bf4f87
+    home: https://jenkins.io/
+    icon: https://wiki.jenkins-ci.org/download/attachments/2916393/logo.png
+    maintainers:
+    - email: lachlan.evenson@microsoft.com
+      name: lachie83
+    - email: viglesias@google.com
+      name: viglesiasce
+    - email: maor.friedman@redhat.com
+      name: maorfr
+    - email: mail@torstenwalter.de
+      name: torstenwalter
+    - email: garridomota@gmail.com
+      name: mogaal
+    name: jenkins
+    sources:
+    - https://github.com/jenkinsci/jenkins
+    - https://github.com/jenkinsci/docker-jnlp-slave
+    - https://github.com/maorfr/kube-tasks
+    - https://github.com/jenkinsci/configuration-as-code-plugin
+    urls:
+    - jenkins-1.10.0.tgz
+    version: 1.10.0
+  kibana:
+  - apiVersion: v1
+    appVersion: 7.7.0
+    created: "2021-02-04T15:32:17.433819568Z"
+    description: Official Elastic helm chart for Kibana
+    digest: 4f584719bd05721a606ac2a1089e6282214d28794d4d1f4f8d92c9264cfac3e9
+    home: https://github.com/elastic/helm-charts
+    icon: https://helm.elastic.co/icons/kibana.png
+    maintainers:
+    - email: helm-charts@elastic.co
+      name: Elastic
+    name: kibana
+    sources:
+    - https://github.com/elastic/kibana
+    urls:
+    - kibana-7.7.0.tgz
+    version: 7.7.0
+  metallb:
+  - apiVersion: v1
+    appVersion: 0.8.1
+    created: "2021-02-04T15:32:17.43488911Z"
+    description: MetalLB is a load-balancer implementation for bare metal Kubernetes
+      clusters
+    digest: f8fb32cf816a6d83641a9bf51e6ebace304f73513231232da498cb36c4bf96de
+    home: https://metallb.universe.tf
+    icon: https://metallb.universe.tf/images/logo.png
+    keywords:
+    - load-balancer
+    - balancer
+    - lb
+    - bgp
+    - arp
+    - vrrp
+    - vip
+    maintainers:
+    - email: dave@natulte.net
+      name: danderson
+    name: metallb
+    urls:
+    - metallb-0.12.0.tgz
+    version: 0.12.0
+  metrics-server:
+  - apiVersion: v1
+    appVersion: 0.3.6
+    created: "2021-02-04T15:32:17.435830886Z"
+    description: Metrics Server is a cluster-wide aggregator of resource usage data.
+    digest: 174703523eb179bf3814daf4240b5763d3fdac9b7e72df3d9ec927db4a0c7b49
+    home: https://github.com/kubernetes-incubator/metrics-server
+    keywords:
+    - metrics-server
+    maintainers:
+    - email: o.with@sportradar.com
+      name: olemarkus
+    - email: k.aasan@sportradar.com
+      name: kennethaasan
+    name: metrics-server
+    sources:
+    - https://github.com/kubernetes-incubator/metrics-server
+    urls:
+    - metrics-server-2.8.9.tgz
+    version: 2.8.9
+  nexus:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-02-04T15:32:17.436301995Z"
+    description: A Helm chart for Kubernetes
+    digest: d3e91e5c66c52b21ddbee8adb0ae1db320471b8c0e8f110e6a94b67d47041c45
+    name: nexus
+    urls:
+    - nexus-0.1.0.tgz
+    version: 0.1.0
+  nfs-client-provisioner:
+  - apiVersion: v1
+    appVersion: 3.1.0
+    created: "2021-02-04T15:32:17.437188727Z"
+    description: nfs-client is an automatic provisioner that used your *already configured*
+      NFS server, automatically creating Persistent Volumes.
+    digest: f5a3b033a7d1665e01586f121aa7ed3f408803c4c6d2ae701d498d0f68f9126d
+    home: https://github.com/kubernetes-incubator/external-storage/tree/master/nfs-client
+    keywords:
+    - nfs
+    - storage
+    maintainers:
+    - email: devopnetfl@gmail.com
+      name: florin
+    name: nfs-client-provisioner
+    sources:
+    - https://github.com/kubernetes-incubator/external-storage/tree/master/nfs-client
+    urls:
+    - nfs-client-provisioner-1.2.8.tgz
+    version: 1.2.8
+  nginx-ingress:
+  - apiVersion: v1
+    appVersion: 0.26.2
+    created: "2021-02-04T15:32:17.440743042Z"
+    description: An nginx Ingress controller that uses ConfigMap to store the nginx
+      configuration.
+    digest: a6d0e0446ba5c7fe69d167490f78e9a6b5c3f0c9edaee385bb1ec952ba14fb59
+    home: https://github.com/kubernetes/ingress-nginx
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nginx_logo.svg/500px-Nginx_logo.svg.png
+    keywords:
+    - ingress
+    - nginx
+    kubeVersion: '>=1.10.0-0'
+    maintainers:
+    - name: ChiefAlexander
+    - email: Trevor.G.Wood@gmail.com
+      name: taharah
+    name: nginx-ingress
+    sources:
+    - https://github.com/kubernetes/ingress-nginx
+    urls:
+    - nginx-ingress-1.28.2.tgz
+    version: 1.28.2
+  prometheus:
+  - apiVersion: v1
+    appVersion: 2.15.2
+    created: "2021-02-04T15:32:17.449503567Z"
+    description: Prometheus is a monitoring system and time series database.
+    digest: b5316a8064c1328b299f67cc6676255a776f5a8a92a317ae6f9ea7371e17433d
+    home: https://prometheus.io/
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    maintainers:
+    - email: devopsfl@gmail.com
+      name: florin
+    name: prometheus
+    sources:
+    - https://github.com/prometheus/alertmanager
+    - https://github.com/prometheus/prometheus
+    - https://github.com/prometheus/pushgateway
+    - https://github.com/prometheus/node_exporter
+    - https://github.com/kubernetes/kube-state-metrics
+    urls:
+    - prometheus-10.0.1.tgz
+    version: 10.0.1
+  waypoint:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-02-04T15:32:17.450353382Z"
+    description: A Helm chart for Kubernetes
+    digest: cdc658dfcfa46ba351543b8f98051ce4736cad9b97092a1bf91759e026fdd00f
+    name: waypoint
+    urls:
+    - waypoint-0.1.0.tgz
+    version: 0.1.0
+generated: "2021-02-04T15:32:17.418921356Z"
