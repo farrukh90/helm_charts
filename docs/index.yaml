@@ -3,9 +3,9 @@ entries:
   artemis:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-04T15:32:17.419856936Z"
+    created: "2021-03-02T21:16:52.619886275Z"
     description: A Helm chart for Kubernetes
-    digest: 57aaf509ce17e067cb7554ee7910d75a99a357e16a32bf0d778cdc0ed1bdfe85
+    digest: 32e05c56f45e1b6e5a8c53d16967444d1566001f0f9688b98acf191a61d65899
     name: artemis
     urls:
     - artemis-0.1.0.tgz
@@ -13,11 +13,11 @@ entries:
   consul:
   - apiVersion: v1
     appVersion: 1.5.3
-    created: "2021-02-04T15:32:17.422707522Z"
+    created: "2021-03-02T21:16:52.624884164Z"
     description: Highly available and distributed service discovery and key-value
       store designed with support for the modern data center to make distributed systems
       and configuration easy.
-    digest: b94b3a0c464859b1da34a4ba53647e2c098a2cff5c4639192a50f521464492b6
+    digest: 0001f44701ad9e354f0acf572e4b0465d214d9f5140486394d9415510467f3e7
     home: https://github.com/hashicorp/consul
     icon: https://raw.githubusercontent.com/hashicorp/consul/bce3809dfca37b883828c3715b84143dd71c0f85/website/source/assets/images/favicons/android-chrome-512x512.png
     maintainers:
@@ -32,9 +32,9 @@ entries:
   elasticsearch:
   - apiVersion: v1
     appVersion: 7.8.0
-    created: "2021-02-04T15:32:17.427744087Z"
+    created: "2021-03-02T21:16:52.646462133Z"
     description: Official Elastic helm chart for Elasticsearch
-    digest: 51c18ee08d5b0abc890bcbe8e80006a843a3d1bc9ef15ef47e4432fd7274d9e3
+    digest: 4eda193d645d99e9d7e0fe86072a32338d3bb09674e7966269e1a5d9eca85996
     home: https://github.com/elastic/helm-charts
     icon: https://helm.elastic.co/icons/elasticsearch.png
     maintainers:
@@ -49,9 +49,9 @@ entries:
   filebeat:
   - apiVersion: v1
     appVersion: 7.8.0
-    created: "2021-02-04T15:32:17.428912417Z"
+    created: "2021-03-02T21:16:52.652481273Z"
     description: Official Elastic helm chart for Filebeat
-    digest: 2a788b24a0abb67cbe058c18b91e3e1ee4e6bc4c3697ec5fb1150d535182b941
+    digest: 3d3ec1fa5e210f95fc0013c6d471468dbae3ab90b29d4cdf9a991a8835bb2297
     home: https://github.com/elastic/helm-charts
     icon: https://helm.elastic.co/icons/beats.png
     maintainers:
@@ -66,11 +66,11 @@ entries:
   jenkins:
   - apiVersion: v1
     appVersion: lts
-    created: "2021-02-04T15:32:17.432538859Z"
+    created: "2021-03-02T21:16:52.668830233Z"
     description: Open source continuous integration server. It supports multiple SCM
       tools including CVS, Subversion and Git. It can execute Apache Ant and Apache
       Maven-based projects as well as arbitrary scripts.
-    digest: 62aea3455e34dabc1e5a5524eee15e21b2b71b9cc40dbdfa3481656205bf4f87
+    digest: 73d6109bb5571720ecd0da6d09a13acdeb9e1ecfb3e56d8ccfbf354b982d07f0
     home: https://jenkins.io/
     icon: https://wiki.jenkins-ci.org/download/attachments/2916393/logo.png
     maintainers:
@@ -96,9 +96,9 @@ entries:
   kibana:
   - apiVersion: v1
     appVersion: 7.7.0
-    created: "2021-02-04T15:32:17.433819568Z"
+    created: "2021-03-02T21:16:52.672482814Z"
     description: Official Elastic helm chart for Kibana
-    digest: 4f584719bd05721a606ac2a1089e6282214d28794d4d1f4f8d92c9264cfac3e9
+    digest: 4a0f48135814aa2060b2d088daf6a94713d038bb6efa2b210d29f5a68f74210f
     home: https://github.com/elastic/helm-charts
     icon: https://helm.elastic.co/icons/kibana.png
     maintainers:
@@ -113,10 +113,10 @@ entries:
   metallb:
   - apiVersion: v1
     appVersion: 0.8.1
-    created: "2021-02-04T15:32:17.43488911Z"
+    created: "2021-03-02T21:16:52.674842176Z"
     description: MetalLB is a load-balancer implementation for bare metal Kubernetes
       clusters
-    digest: f8fb32cf816a6d83641a9bf51e6ebace304f73513231232da498cb36c4bf96de
+    digest: f99bf622b8e7fe54a961d787b566f428d60495fc48f1275c67d808996977d930
     home: https://metallb.universe.tf
     icon: https://metallb.universe.tf/images/logo.png
     keywords:
@@ -137,9 +137,9 @@ entries:
   metrics-server:
   - apiVersion: v1
     appVersion: 0.3.6
-    created: "2021-02-04T15:32:17.435830886Z"
+    created: "2021-03-02T21:16:52.676527318Z"
     description: Metrics Server is a cluster-wide aggregator of resource usage data.
-    digest: 174703523eb179bf3814daf4240b5763d3fdac9b7e72df3d9ec927db4a0c7b49
+    digest: 734b81df32df23cd5c5a885a0f370d48600b90ee12dab0f4061122c4ef58c0de
     home: https://github.com/kubernetes-incubator/metrics-server
     keywords:
     - metrics-server
@@ -157,9 +157,9 @@ entries:
   nexus:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-04T15:32:17.436301995Z"
+    created: "2021-03-02T21:16:52.685316946Z"
     description: A Helm chart for Kubernetes
-    digest: d3e91e5c66c52b21ddbee8adb0ae1db320471b8c0e8f110e6a94b67d47041c45
+    digest: 14056e57b0154854edc8f7b500d27def7fd003836c0433b30e74014ae32c122b
     name: nexus
     urls:
     - nexus-0.1.0.tgz
@@ -167,10 +167,10 @@ entries:
   nfs-client-provisioner:
   - apiVersion: v1
     appVersion: 3.1.0
-    created: "2021-02-04T15:32:17.437188727Z"
+    created: "2021-03-02T21:16:52.693458211Z"
     description: nfs-client is an automatic provisioner that used your *already configured*
       NFS server, automatically creating Persistent Volumes.
-    digest: f5a3b033a7d1665e01586f121aa7ed3f408803c4c6d2ae701d498d0f68f9126d
+    digest: 7e25aa93cd7c906615fb15d18b356a1a7dff2239cf70f0116732b6344431434b
     home: https://github.com/kubernetes-incubator/external-storage/tree/master/nfs-client
     keywords:
     - nfs
@@ -187,10 +187,10 @@ entries:
   nginx-ingress:
   - apiVersion: v1
     appVersion: 0.26.2
-    created: "2021-02-04T15:32:17.440743042Z"
+    created: "2021-03-02T21:16:52.708723443Z"
     description: An nginx Ingress controller that uses ConfigMap to store the nginx
       configuration.
-    digest: a6d0e0446ba5c7fe69d167490f78e9a6b5c3f0c9edaee385bb1ec952ba14fb59
+    digest: f5e061f1c57208dcc1dd1b0c906a75137493e8abb84739ec7d280113f4d0f062
     home: https://github.com/kubernetes/ingress-nginx
     icon: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nginx_logo.svg/500px-Nginx_logo.svg.png
     keywords:
@@ -210,9 +210,9 @@ entries:
   prometheus:
   - apiVersion: v1
     appVersion: 2.15.2
-    created: "2021-02-04T15:32:17.449503567Z"
+    created: "2021-03-02T21:16:52.717264942Z"
     description: Prometheus is a monitoring system and time series database.
-    digest: b5316a8064c1328b299f67cc6676255a776f5a8a92a317ae6f9ea7371e17433d
+    digest: fde40f48c1f4aadb9920769e0e43a3e9f71d7b6e38115ba8dc94e8a0a01f4aa8
     home: https://prometheus.io/
     icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
     maintainers:
@@ -230,12 +230,19 @@ entries:
     version: 10.0.1
   waypoint:
   - apiVersion: v1
-    appVersion: "1.0"
-    created: "2021-02-04T15:32:17.450353382Z"
-    description: A Helm chart for Kubernetes
-    digest: cdc658dfcfa46ba351543b8f98051ce4736cad9b97092a1bf91759e026fdd00f
+    appVersion: 0.1.5
+    created: "2021-03-02T21:16:52.718570431Z"
+    description: A customizable Helm chart that deploys the Hashicorp Waypoint Server
+      into Kubernetes. Created by Fuchicorp.
+    digest: 0b670617c8cdaf01a359ab0e75a2dbeeb4473a064d97a572f4c497983d55a53d
+    icon: https://i.ibb.co/2hG3PwX/Fuchi-Corp-Image.jpg
+    maintainers:
+    - name: Fuchicorp
     name: waypoint
+    sources:
+    - https://www.waypointproject.io/
+    - https://fuchicorp.github.io/helm_charts
     urls:
     - waypoint-0.1.0.tgz
     version: 0.1.0
-generated: "2021-02-04T15:32:17.418921356Z"
+generated: "2021-03-02T21:16:52.614428636Z"
