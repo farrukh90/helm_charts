@@ -1,0 +1,79 @@
+# Default values for isitup.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 2
+
+image:
+  repository: ${deployment_image}
+  pullPolicy: IfNotPresent
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+globalEnvironments:
+  enabled: true
+
+  environments:
+  - name: DEBUG
+    value: ${debug_mode}
+       
+  - name: GIT_TOKEN
+    value: ${git_token)
+    
+        
+imageSecret:
+  enabled: true
+  allSecrets:
+  - name: nexus-creds
+
+
+service:
+  type: ClusterIP
+  port: 80
+
+
+ingress:
+  enabled: false
+  annotations: 
+    # kubernetes.io/ingress.class: nginx
+    # cert-manager.io/cluster-issuer: letsencrypt-prod
+
+  hosts:
+  - host: isitup.cluster.local
+    paths: 
+    - /
+    
+  tls:
+  - secretName: isitup-tls
+    hosts:
+      - isitup.cluster.local
+
+  
+
+        
+endpoint: isitup.cluster.local
+
+githubProxy:
+  enabled: true
+  githubOrganization: ${github_organization}
+
+
+resources: {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
