@@ -83,35 +83,22 @@ Once you have installed your chart you will see that we have populated the boots
 ```
 service:
   type: ClusterIP
-  waypointGrpcPort: 9701
-  waypointServerPort: 9702
+  port: 80
+  
 ```
 
-Please note, you will need to allow access for these ports via your firewall or security group.  We have provided the suggested commands for bootstrapping,context and verify but the NodPort is not fully tested. 
 
-## Enable Ingresses (ClusterIP)
-Important to note that currently Waypoint has a TLS limitation [click here to read more](https://www.waypointproject.io/docs/server/run/production). We have configured this chart with the suggested work around given by Waypoint. With the help of the ingress-controller (nginx in this case) both ingress annotations must be configured to terminate the TLS with your desired TLS certificate. The backend connection must use the self-signed TLS connection to the Waypoint server. This is accomplished by activating the following annotations for each ingress. 
-### Annotations <br>   
-
-
-   - **waypointServer annotations** <br>
-```
- nginx.ingress.kubernetes.io/backend-protocol: HTTPS 
-```
-- **nginx.ingress.kubernetes.io/backend-protocol** indicates how NGINX should communicate with the backend service. <br>
-_Valid Values: HTTP, HTTPS, GRPC, GRPCS, AJP and FCGI._ <br>
 
 ### TLS
-  - Both the waypointGrpc and waypointServer require tls certs. If you have a cert-manager completing these requests, please ensure to add that annotation for both ingress mentions. 
+```
+
+```
 
 
 
 
 ## Delete the Chart
 ```
-$ helm delete --purge waypoint 
+$ helm delete --purge isitup
 ```
-Storage pvc will not get deleted, to delete storage persistent volume claim, run:
-```
-$ kubectl delete pvc data-waypoint-0
-```
+
