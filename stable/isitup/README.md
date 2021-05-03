@@ -56,8 +56,8 @@ Once you have installed your chart you will see that we have populated the boots
 | `ImageTag`              | Container image tag                   | `0.1.5`                                                    |
 | `ImagePullPolicy`       | Container pull policy                 | `IfNotPresent`                                                   |
 | `securityContext`       | set fsGroup                           | `1000`                                                     |
-| `nameOverride`                    | Override the resource name prefix    | `waypoint`                                 |
-| `fullnameOverride`                | Override the full resource names     | `waypoint-{release-name}` (or `waypont` if release-name 
+| `nameOverride`                    | Override the resource name prefix    | `{}`                                 |
+| `fullnameOverride`                | Override the full resource names     |  `{}` 
 | `service.type`        | Configures the service type       |  `ClusterIP`                                               |
 | `service.port`        | Configures the service port  | `80`                                                |
 | `isitupServer.Ingress.enabled`     | Create Ingress for isitup UI (https)      | `true`                                                    |
@@ -65,8 +65,12 @@ Once you have installed your chart you will see that we have populated the boots
 | `isitupServer.Ingress.labels`      | Associate labels to the Ingress       | `{}`                                                       |
 | `isitupServer.Ingress.hosts`       | Associate hosts with the Ingress      | `[]`                                                       |
 | `isitupServer.Ingress.path`        | Associate TLS with the Ingress        | `/`                                                        |
-| `isitupServer.Ingress.tls`         | Associate path with the Ingress       | `[]`                                                       |
-| `Resources`             | Container resource requests and limits| `{}`                                                       |
+| `isitupServer.Ingress.tls`         | Associate path with the Ingress       | `[]`                                                       
+| `githubProxy`         | Proxy server for authontication of the user      | `true`
+
+| `githubProxy.githubOrganizition`         | Authontecation for github organizition      | `github_organizations` 
+
+| `Resources`             | Container resource requests and limits| `{}`                                                       
 | `nodeSelector`          | Node labels for pod assignment        | `{}`                                                       |
 | `affinity`              | Affinity settings                    | `{}`                                               |
 | `tolerations`           | Tolerations for pod assignment        | `[]`                                                       |
