@@ -96,11 +96,6 @@ Important to note that currently Waypoint has a TLS limitation [click here to re
 ```
 - **nginx.ingress.kubernetes.io/backend-protocol** indicates how NGINX should communicate with the backend service. <br>
 _Valid Values: HTTP, HTTPS, GRPC, GRPCS, AJP and FCGI._ <br>
-### Hosts 
-  - **waypointGrpc** <br>
-Add your domain name for GRPC to use.  We suggest "waypoint-grpc.cluster.local".  This will help to define the difference between the grpc and https domains.
-   - **waypointServer** <br>
-       Add your domain name for HTTPS to use.  We suggest "waypoint.cluster.local". This address will bring you to the Waypoint UI login screen. 
 
 ### TLS
   - Both the waypointGrpc and waypointServer require tls certs. If you have a cert-manager completing these requests, please ensure to add that annotation for both ingress mentions. 
