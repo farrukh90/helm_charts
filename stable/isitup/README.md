@@ -89,9 +89,23 @@ service:
 
 
 
-### TLS
+### If you want to enable ingress and TLS we need to enable this confuguration true and move to command out for annotations
 ```
+ingress:
+  enabled: false
+  annotations: 
+    # kubernetes.io/ingress.class: nginx
+    # cert-manager.io/cluster-issuer: letsencrypt-prod
 
+  hosts:
+  - host: isitup.cluster.local
+    paths: 
+    - /
+    
+  tls:
+  - secretName: isitup-tls
+    hosts:
+      - isitup.cluster.local
 ```
 
 
