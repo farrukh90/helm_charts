@@ -109,6 +109,15 @@ ingress:
 ```
 
 
+### We are using the proxy server for authentication of isitup for user sign in. We need to enable the githubProxy to be able to use the proxy. It is getting the users from github organization.
+
+```
+
+githubProxy:
+  enabled: true
+  githubOrganization: ${github_organization}
+
+````
 
 
 ## Delete the Chart
