@@ -109,7 +109,9 @@ ingress:
 ```
 
 
-### We are using the proxy server for authentication of isitup for user sign in. We need to enable the githubProxy to be able to use the proxy. It is getting the users from github organization.
+### We are using the proxy server for authentication of isitup for user sign in. We need to enable the githubProxy to be able to use the proxy. It is getting the users from github organization. You can check this links to have an idea how we use and configure proxy server as a authentication and signin.     https://github.com/oauth2-proxy/oauth2-proxy.  https://github.com/fuchicorp/common_tools/wiki/Upgrade-Kubernetes-Dashboard-Proxy-oAuth2-Proxy
+
+
 
 ```
 
