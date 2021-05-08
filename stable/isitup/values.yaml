@@ -53,7 +53,7 @@ ingress:
   
 
         
-endpoint: isitup.cluster.local
+
 
 githubProxy:
   enabled: true
