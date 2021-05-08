@@ -22,13 +22,6 @@ globalEnvironments:
   - name: GIT_TOKEN
     value: ${git_token)
     
-        
-imageSecret:
-  enabled: true
-  allSecrets:
-  - name: nexus-creds
-
-
 service:
   type: ClusterIP
   port: 80
@@ -49,10 +42,6 @@ ingress:
   - secretName: isitup-tls
     hosts:
       - isitup.cluster.local
-
-  
-
-        
 
 
 githubProxy:
