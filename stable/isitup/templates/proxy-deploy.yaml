@@ -1,3 +1,4 @@
+{{- if .Values.githubProxy.enabled -}}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -48,3 +49,4 @@ spec:
         ports:
         - containerPort: 4180
           protocol: TCP
+{{- end }}
