@@ -78,14 +78,25 @@ Once you have installed your chart you will see that we have populated the boots
 
 
 ### **Examples below are of the service type and ports associated:**
-
+  - **LoadBalancer** 
+```
+service:
+  type: LoadBalancer
+  port: 80
+  ```
   - **ClusterIP** 
 ```
 service:
   type: ClusterIP
   port: 80
-  
 ```
+  - **NodePort** 
+```
+service:
+  type: NodePort
+  port: 80
+```
+Please note, you will need to allow access for these ports via your firewall or security group.  We have provided the suggested commands for bootstrapping,context and verify but the NodPort is not fully tested. 
 
 
 
