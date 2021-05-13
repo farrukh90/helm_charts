@@ -1,5 +1,5 @@
-{{- if .Values.ingress.enabled -}}
-{{- $fullName := include "isitup.fullname" . -}}
+{{- if not .Values.proxy.ingress.enabled }}
+{{- if .Values.ingress.enabled }}
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
@@ -33,4 +33,5 @@ spec:
               servicePort: http
         {{- end }}
   {{- end }}
+{{- end }}
 {{- end }}
