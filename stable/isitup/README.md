@@ -48,7 +48,7 @@ $ helm install --name isitup fuchicorp/isitup
 ## After Install Instructions
 Once you have installed your chart you will see that we have populated the bootstrapping, context and verify commands for you. You can copy and paste these into your prompt to complete the process quickly. 
 
-## Configurations of the Waypoint helm chart
+## Configurations of the Isitup Helm Chart
  Parameter               | Description                           | Default                                                    |
 | ----------------------- | ----------------------------------    | ---------------------------------------------------------- |
 | `Name`                  | isitup name name               | `isitup`                                                   |
