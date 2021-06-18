@@ -1,5 +1,5 @@
 {{- if not .Values.ingress.enabled }}
-{{- if .Values.proxy.ingress.enabled }}
+{{- if .Values.githubProxy.enabled }}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -20,7 +20,7 @@ spec:
       - args:
         - --provider=github
         - --email-domain=*
-        - --upstream=http://{{ include "isitup.fullname" . }}.{{.Release.Namespace}}.svc.cluster.local
+        - --upstream=http://{{ include "istiup.fullname" . }}.{{.Release.Namespace}}.svc.cluster.local
         - --http-address=0.0.0.0:4180
         - --github-org={{ .Values.githubProxy.githubOrganization }}
         - --pass-basic-auth=false

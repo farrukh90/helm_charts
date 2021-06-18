@@ -1,11 +1,11 @@
-{{- if not .Values.proxy.ingress.enabled }}
-{{- if .Values.ingress.enabled }}
+{{- if .Values.ingress.enabled -}}
+{{- $fullName := include "istiup.fullname" . -}}
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: {{ $fullName }}
+  name: {{ $fullName }}-noodle
   labels:
-{{ include "isitup.labels" . | indent 4 }}
+{{ include "istiup.labels" . | indent 4 }}
   {{- with .Values.ingress.annotations }}
   annotations:
     {{- toYaml . | nindent 4 }}
@@ -33,5 +33,4 @@ spec:
               servicePort: http
         {{- end }}
   {{- end }}
-{{- end }}
 {{- end }}

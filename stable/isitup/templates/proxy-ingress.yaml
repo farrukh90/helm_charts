@@ -1,5 +1,5 @@
 {{- if not .Values.ingress.enabled }}
-{{- if .Values.proxy.ingress.enabled }}
+{{- if .Values.githubProxy.enabled }}
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
@@ -8,14 +8,14 @@ metadata:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/auth-url: "https://$host/oauth2/auth"
     nginx.ingress.kubernetes.io/auth-signin: "https://$host/oauth2/start?rd=$escaped_request_uri"
-  name: {{ include "isitup.fullname" . }}
+  name: ingress-isitup
 spec:
   rules:
-  - host: {{ .Values.endpoint }}
+  - host: {{ .Values.endpoint}}
     http:
       paths:
       - backend:
-          serviceName: {{ include "isitup.fullname" . }}
+          serviceName: ingress-isitup
           servicePort: 80
         path: /
 
@@ -39,7 +39,7 @@ spec:
         path: /oauth2
   tls:
   - hosts:
-    - {{ .Values.endpoint }}
+    - {{ .Values.endpoint}}
     secretName: isitup-tls
 {{- end }}
 {{- end }}
